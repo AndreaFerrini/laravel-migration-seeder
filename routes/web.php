@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\TRainController;
+use App\Http\Controllers\TrainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,4 @@ use App\Http\Controllers\TRainController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.welcome');
-});
+Route::get('/', [TrainController::class, 'index'])->name('home');
